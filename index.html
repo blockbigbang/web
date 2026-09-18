@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Primary Meta Tags -->
+  <title>Block Big Bang - Best Block Puzzle Game | Block Blast & Logic Puzzle</title>
+  <meta name="title" content="Block Big Bang - Best Block Puzzle Game | Block Blast & Logic Puzzle">
+  <meta name="description" content="Play Block Big Bang, the ultimate block puzzle game! Blast blocks, score high combos, and enjoy peaceful offline logic puzzle gameplay. Download free on Google Play.">
+  <meta name="keywords" content="block game, block big bang, block blast, block puzzle, puzzle game, brain game, offline puzzle game, tetris style game, block master, casual game, puzzle blast, jewel block puzzle">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0d16">
+  <link rel="canonical" href="https://play.google.com/store/apps/details?id=com.block.bigbang&hl=en">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://play.google.com/store/apps/details?id=com.block.bigbang&hl=en">
+  <meta property="og:title" content="Block Big Bang - Addictive Block Puzzle Game">
+  <meta property="og:description" content="Blast blocks, clear rows, and trigger big bang combos! Relaxing and challenging block game.">
+  <meta property="og:image" content="logo.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://play.google.com/store/apps/details?id=com.block.bigbang&hl=en">
+  <meta property="twitter:title" content="Block Big Bang - Addictive Block Puzzle Game">
+  <meta property="twitter:description" content="Blast blocks, clear rows, and trigger big bang combos! Relaxing and challenging block game.">
+  <meta property="twitter:image" content="logo.png">
+
+  <!-- Favicon Configuration -->
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="shortcut icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Block Big Bang",
+    "operatingSystem": "ANDROID",
+    "applicationCategory": "GameApplication",
+    "genre": "Block Puzzle Game",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "url": "https://play.google.com/store/apps/details?id=com.block.bigbang&hl=en"
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-dark: #0a0d16;
+      --board-bg: #121829;
+      --accent-yellow: #ffb800;
+      --accent-cyan: #00d2ff;
+      --text-main: #ffffff;
+      --text-sub: #8e9bb4;
+      --card-bg: #151c2e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(157, 78, 221, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 210, 255, 0.15) 0%, transparent 40%),
+        radial-gradient(#1e293b 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 24px 24px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      backdrop-filter: blur(10px);
+      background: rgba(10, 13, 22, 0.85);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    .brand-name {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .brand-name .block { color: #ffffff; }
+    .brand-name .big { color: var(--accent-cyan); }
+    .brand-name .bang { color: var(--accent-yellow); }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--text-sub);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: #ffffff;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px 60px;
+      position: relative;
+    }
+
+    .title-banner {
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 900;
+      font-size: clamp(46px, 8.5vw, 90px);
+      text-transform: uppercase;
+      line-height: 0.95;
+      margin-bottom: 24px;
+      letter-spacing: 1px;
+      filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.6));
+    }
+
+    .title-banner .line1 {
+      color: #ffffff;
+      display: block;
+      -webkit-text-stroke: 3px #000;
+    }
+
+    .title-banner .line2 {
+      color: var(--accent-cyan);
+      display: block;
+      -webkit-text-stroke: 3px #000;
+    }
+
+    .title-banner .line3 {
+      color: var(--accent-yellow);
+      display: block;
+      -webkit-text-stroke: 3px #000;
+    }
+
+    .hero p {
+      color: var(--text-sub);
+      font-size: clamp(16px, 2.3vw, 20px);
+      max-width: 620px;
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: linear-gradient(180deg, #ffb800 0%, #ff8c00 100%);
+      color: #0b0f19;
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 900;
+      font-size: 20px;
+      padding: 16px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 0 #b36200, 0 16px 24px rgba(255, 184, 0, 0.35);
+      transition: all 0.15s ease;
+      cursor: pointer;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(2px);
+      box-shadow: 0 6px 0 #b36200, 0 12px 20px rgba(255, 184, 0, 0.4);
+    }
+
+    .cta-btn:active {
+      transform: translateY(8px);
+      box-shadow: 0 0 0 #b36200, 0 4px 10px rgba(255, 184, 0, 0.4);
+    }
+
+    .cta-btn svg {
+      width: 26px;
+      height: 26px;
+      fill: currentColor;
+    }
+
+    /* Responsive Hero Logo Container */
+    .hero-logo-container {
+      margin: 48px auto 20px;
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-logo-container::before {
+      content: "";
+      position: absolute;
+      inset: -15px;
+      background: radial-gradient(circle, rgba(0, 210, 255, 0.22) 0%, rgba(255, 184, 0, 0.12) 50%, transparent 75%);
+      z-index: 1;
+      pointer-events: none;
+      filter: blur(20px);
+    }
+
+    .hero-logo-img {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 28px;
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 
+        0 25px 60px rgba(0, 0, 0, 0.7),
+        0 0 25px rgba(0, 210, 255, 0.15);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .hero-logo-img:hover {
+      transform: scale(1.03) rotate(0.5deg);
+    }
+
+    /* Features Section */
+    .features {
+      padding: 60px 8% 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background: var(--card-bg);
+      padding: 36px 28px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 210, 255, 0.25);
+    }
+
+    .feature-card h2 {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 24px;
+      color: #ffffff;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .feature-card p {
+      color: var(--text-sub);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 35px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      background-color: #07090f;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      color: var(--text-sub);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .copyright {
+      color: var(--text-sub);
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .hero-logo-container {
+        max-width: 280px;
+      }
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="brand" title="Block Big Bang">
+      <img src="logo.png" alt="Block Big Bang Game Icon" onerror="this.style.display='none'">
+      <div class="brand-name">
+        <span class="block">Block</span> <span class="big">Big</span> <span class="bang">Bang</span>
+      </div>
+    </a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="title-banner">
+        <span class="line1">Block</span>
+        <span class="line2">Big</span>
+        <span class="line3">Bang</span>
+      </div>
+      
+      <p>The ultimate block game experience! Drag shapes, blast full rows, trigger explosive chain reactions, and challenge your brain anywhere, anytime.</p>
+      
+      <a href="https://play.google.com/store/apps/details?id=com.block.bigbang&hl=en" class="cta-btn" target="_blank" rel="noopener noreferrer" title="Download Block Big Bang on Google Play">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+        </svg>
+        <span>GET IT ON GOOGLE PLAY</span>
+      </a>
+
+      <!-- Responsive Logo.png in place of the static block grid -->
+      <div class="hero-logo-container">
+        <img src="logo.png" alt="Block Big Bang Game Artwork" class="hero-logo-img">
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature-card">
+        <h2>Score High Combos</h2>
+        <p>Master your block blast strategies! Place block pieces precisely, eliminate multiple lines at once, and set unprecedented high scores.</p>
+      </div>
+      <div class="feature-card">
+        <h2>Peaceful Puzzle Flow</h2>
+        <p>Enjoy a serene, stress-free gaming environment. No countdown timers or sudden deadlines—just you and pure puzzle logic.</p>
+      </div>
+      <div class="feature-card">
+        <h2>Outstanding Visuals</h2>
+        <p>Vibrant jelly-candy blocks, smooth tactile feedback, and stunning blast animations designed to give you satisfying play sessions.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="copyright">
+      &copy; 2026 Block Big Bang. All rights reserved.
+    </div>
+    <div class="footer-links">
+      <a href="https://play.google.com/store/apps/details?id=com.block.bigbang&hl=en" target="_blank" rel="noopener noreferrer">Play Store</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Service</a>
+    </div>
+  </footer>
+
+</body>
+</html>
